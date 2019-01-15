@@ -1,4 +1,4 @@
-## Balanced Parenthesis
+## Balanced Brackets
 
 
 ### Problem
