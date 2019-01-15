@@ -1,23 +1,36 @@
-## Largest Subarray Sum
+## Balanced Parenthesis
 
 
 ### Problem
 
-Given an array of integers find a sequence with the largest sum. 
+Given a string consisting only of the characters (, [, {, ), ], and }, write a function ```isBalanced()``` that returns a boolean that determines whether or not every open parentheses or bracket is paired correctly and is balanced.
 
-For example, take a look at an example below.
+Two brackets are considered to be a matched pair if the an opening bracket (i.e., (, [, or {) occurs to the left of a closing bracket (i.e., ), ], or }) of the exact same type. There are three types of matched pairs of brackets: [], {}, and ().
 
-```javascript  
+A matching pair of brackets is not balanced if the set of brackets it encloses are not matched. For example, {[(])} is not balanced because the contents in between { and } are not balanced. The pair of square brackets encloses a single, unbalanced opening bracket, (, and the pair of parentheses encloses a single, unbalanced closing square bracket, ].
 
-let array = [1, -1, 5, 3, -7, 4, 5, 6, -100, 4]
+More examples:
 
-function largestSubarraySum(array){
- // code to write here
-}
-
-largestSubarraySum(array)
-// 16
+```javascript
+isBalanced("()[]")
+//true
 ```
+
+```javascript
+isBalanced("([])")
+//true
+```
+
+```javascript
+isBalanced("({)}")
+//false
+```
+
+```javascript
+isBalanced("{[}")
+//false
+```
+
 
 ### Process
 
@@ -27,19 +40,4 @@ Use it as a mechanism to focus on process, and work with a partner, if you can. 
 
 A couple small hints to get started: where are some examples where the solution becomes obvious.  What can you learn from it.  Ok that's enough.  
 
-Be self-aware about when your process.  When is your process good, and when it is less sucessful?  We are trying to be disciplined about developing good habits as much as anything else. 
-
-### A couple more hints for those who have first struggled
-
-If you have not yet worked on this problem yet, and by that we mean spending over an hour with it, then it's time to put away the readme and get to work.  
-
-You can come back to this later, but we won't help too much.  Still you can find a main hint below.
-
-The main hint is that this is a type of greedy algorithm.  It's a new type of algorithm that we did not get a chance to explore.  All a greedy algorithm means, is that even before processing all possible information, you can make begin to make decisions.  Your goal is to try not to regret making the decision at a later time.  
-
-So, here a way to apply a greedy approach is to try to determine if a sequence is a potential maximum contiguous subarray even before reading through the entire array.  Another mechanism is to think about when one can immediately dispose of a sequence as being a potential sequence, even before reading through the entire array.
-
-With that, get to work.
-
-
-	
+Be self-aware about when your process.  When is your process good, and when it is less successful?  We are trying to be disciplined about developing good habits as much as anything else.
